@@ -12,7 +12,7 @@ import { mini } from './library.js';
 // example 1
 //
 
-let sampleArrayOfNames = ["Celeste&#","Owen/!&","Hobbes%","Maggie$"];
+let sampleArrayOfNames = ["Celeste&#","Owen/!&","Hobbes%","Maggie$", "Tilly"];
 
 //normally id do this to get rid of all the extra characters
 // for(let i = 0; i < sampleArrayOfNames.length; i++) {
@@ -52,3 +52,35 @@ let sampleArrayOfObjects = [{name: "celeste", hp: 100},{name:"owen", hp: 100},{n
 let objectArray = mini.array.map(sampleArrayOfObjects)(character => character.hp -= 10)
 console.log(objectArray);
 
+
+//
+// Mini.Array.Filter Functionality
+//
+
+//lets explore the filter function!
+//first let's filter out by length of name
+let filterLength = mini.array.filter(sampleArrayOfObjects)(character => character.name.length > 5)
+console.log(filterLength)
+
+
+//
+// Mini.Array.Separate Functionality
+//
+
+//this function exists to separate one array into a nested array of two arrays [[],[]] separated by whether or not they contain the provided string
+//the boolean is whether or not you want the string to be case sensitive
+let testSeparate = mini.array.separateByString(sampleArrayOfNames)("o", true)
+let testSeparate2 = mini.array.separateByString(sampleArrayOfNames)("o")
+let testSeparate3 = mini.array.separateByString(sampleArrayOfNames)("o", false)
+
+console.log(testSeparate)
+console.log(testSeparate3)
+
+//
+// Mini.Array.Combine
+//
+// returns a combined array with no duplicates!
+let array1 = ["foo", "bar"]
+let array2 = ["hi", "bye", "bye"];
+let testCombine = mini.array.combine(array1)(array2)
+console.log(testCombine)

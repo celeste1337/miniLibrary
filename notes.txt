@@ -4,11 +4,9 @@ i'm celeste and this is my final project for current topics in interactive devel
 
 my mini library here is designed to assist in tasks that i dealt with at my two internships:
 
-1. string manipulation. my co-op dealt with a lot of really gross data from the back end that we had to pull apart and manipulate to be useable. obviously that is not the case everywhere, so the methods are generic enough to be used for whatever :)
+1. array manipulation. during the class i really enjoyed the idea of using built in array functions to replace loops, so there will be some array manipulation that i find useful and interesting
 
-2. array manipulation. during the class i really enjoyed the idea of using built in array functions to replace loops, so there will be some array manipulation that i find useful and interesting
-
-3. debugging assistance! a lot of my friends dont like javascript because they find it really difficult to debug and have trouble with types and accessing objects so there will also be some cool fun debugging functions as well :)
+2. debugging assistance! a lot of my friends dont like javascript because they find it really difficult to debug and have trouble with types and accessing objects so there will also be some cool fun debugging functions as well :)
 
 if you're an employer reading this: hi!
 
