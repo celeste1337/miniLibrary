@@ -6,7 +6,9 @@
 
 const mini = {
     array: {
-        
+        map: (arr) => (f) => {
+            return arr.map(f)
+        },
     },
     string: {},
     debug: {},
