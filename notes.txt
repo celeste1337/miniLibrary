@@ -8,6 +8,18 @@ my mini library here is designed to assist in tasks that i dealt with at my two 
 
 2. debugging assistance! a lot of my friends dont like javascript because they find it really difficult to debug and have trouble with types and accessing objects so there will also be some cool fun debugging functions as well :)
 
+difficulties i had making this:
+- defining use cases was really difficult for me. i tried writing the library first but that didn't really work out, so i had to write use cases first then write library code based off of that
+- keeping it small! i really wanted to include more stuff (string & object specific manipulation) but to keep the code from getting too bloated i'm keeping it to this puny size
+- trying to write small, pure functions is really difficult. this class challenged how i think of code and i found myself wanting to just write code how i used to
+
+things i enjoyed while making this:
+- writing code for multiuse purposes! when i originally included string manipulation in my project, i realized that most of what i wanted to use with it could be done with other stuff. i had to think about the library as a whole and write very generically
+- trying to emulate larger libraries' functionality just based off what i think its trying to do! this was a pretty big challenge for me, since i'm not used to thinking of coding in that way (hyper-abstract, very clean, very thoughtfully written, seemingly above my skill level)
+
+what i would like to do next:
+- i'd really like to expand this project some more. i think it'd be useful to add more debugging stuff as i need to and write a lot more utility functions. since the primary consumer of this code is me, it'll be interesting to think of use cases outside of really specific contexts and write more generic code for it
+
 if you're an employer reading this: hi!
 
 thanks for checking out my project

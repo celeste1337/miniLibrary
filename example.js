@@ -1,11 +1,11 @@
-//
-// this will be a file that shows how this library COULD be used
-//
-
 import { mini } from './library.js';
 
 //
-// Mini.Array.Map Functionality
+// A R R A Y F U N C T I O N S
+//
+
+//
+// Mini.Array.Map Functionality - do something to every element in the array and provide the function you want to do!
 //
 
 //
@@ -54,17 +54,14 @@ console.log(objectArray);
 
 
 //
-// Mini.Array.Filter Functionality
+// Mini.Array.Filter Functionality - filter arrays based on a function you pass in!
 //
-
-//lets explore the filter function!
-//first let's filter out by length of name
 let filterLength = mini.array.filter(sampleArrayOfObjects)(character => character.name.length > 5)
 console.log(filterLength)
 
 
 //
-// Mini.Array.Separate Functionality
+// Mini.Array.Separate Functionality - separates arrays based on a string!
 //
 
 //this function exists to separate one array into a nested array of two arrays [[],[]] separated by whether or not they contain the provided string
@@ -77,10 +74,39 @@ console.log(testSeparate)
 console.log(testSeparate3)
 
 //
-// Mini.Array.Combine
+// Mini.Array.Combine -  returns a combined array with no duplicates!
 //
-// returns a combined array with no duplicates!
 let array1 = ["foo", "bar"]
 let array2 = ["hi", "bye", "bye"];
 let testCombine = mini.array.combine(array1)(array2)
 console.log(testCombine)
+
+
+//
+// D E B U G F U N C T I O N S
+//
+
+//
+// mini.debug.type - returns the type!
+//
+console.log(mini.debug.type("hi"))
+console.log(mini.debug.type(123))
+
+//
+// mini.debug.compareType - compares two types, returns true if theyre the same type
+//
+console.log(mini.debug.compareType("hi")("bye"))
+console.log(mini.debug.compareType(123)("foo"))
+
+//
+// mini.debug.compareobjects - sort of compares two objects (not super great in js since they point to different places but this works in a pinch~)
+//
+let testObj = {name: "celeste", hp: 100}
+let testObj2 = {name: "celeste", hp: 100}
+let testObj3 = {name:"owen", dog: "maggie"}
+let testResult = mini.debug.compareObjects(testObj)(testObj2)
+let testResult2 = mini.debug.compareObjects(testObj2)(testObj3)
+console.log(testResult, testResult2)
+
+
+//that's all, folks!

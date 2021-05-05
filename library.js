@@ -30,9 +30,21 @@ const mini = {
         },
         combine: (arr1) => (arr2) => {
             return Array.from(new Set([...arr1, ...arr2]))
-        }
+        },
     },
-    debug: {},
+    debug: {
+        type: (item1) => {
+            return typeof item1
+        },
+        compareType: (item1) => (item2) => {
+            return typeof item1 === typeof item2
+        },
+        compareObjects: (obj1) => (obj2) => {
+            for(const prop in obj1) {
+                return obj1[prop] === obj2[prop]
+            }
+        },
+    },
 }
 
 export { mini }
