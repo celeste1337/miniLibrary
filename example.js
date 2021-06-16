@@ -66,20 +66,20 @@ console.log(filterLength)
 
 //this function exists to separate one array into a nested array of two arrays [[],[]] separated by whether or not they contain the provided string
 //the boolean is whether or not you want the string to be case sensitive
-let testSeparate = mini.array.separateByString(sampleArrayOfNames)("o", true)
-let testSeparate2 = mini.array.separateByString(sampleArrayOfNames)("o")
-let testSeparate3 = mini.array.separateByString(sampleArrayOfNames)("o", false)
+let testSeparate = mini.array.separateByString(sampleArrayOfNames)("o")
+let testSeparate2 = mini.array.separateByString(sampleArrayOfNames)("O")
 
 console.log(testSeparate)
-console.log(testSeparate3)
+console.log(testSeparate2)
+
 
 //
-// Mini.Array.Combine -  returns a combined array with no duplicates!
+// Mini.Array.Union -  returns a combined array with no duplicates!
 //
 let array1 = ["foo", "bar"]
 let array2 = ["hi", "bye", "bye"];
-let testCombine = mini.array.combine(array1)(array2)
-console.log(testCombine)
+let testUnion = mini.array.union(array1)(array2)
+console.log(testUnion)
 
 
 //
@@ -98,15 +98,11 @@ console.log(mini.debug.type(123))
 console.log(mini.debug.compareType("hi")("bye"))
 console.log(mini.debug.compareType(123)("foo"))
 
+
 //
-// mini.debug.compareobjects - sort of compares two objects (not super great in js since they point to different places but this works in a pinch~)
+// mini.debug.tap - performs a function and returns the argument
 //
-let testObj = {name: "celeste", hp: 100}
-let testObj2 = {name: "celeste", hp: 100}
-let testObj3 = {name:"owen", dog: "maggie"}
-let testResult = mini.debug.compareObjects(testObj)(testObj2)
-let testResult2 = mini.debug.compareObjects(testObj2)(testObj3)
-console.log(testResult, testResult2)
+console.log(mini.debug.tap(x => x + 1)(2))
 
 
 //that's all, folks!

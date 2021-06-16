@@ -24,3 +24,7 @@ if you're an employer reading this: hi!
 
 thanks for checking out my project
 celeste <3
+
+
+how to use this library:
+run the examples with this command in the project directory (in ur terminal): `py -m http.server`.

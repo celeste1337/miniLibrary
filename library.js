@@ -15,20 +15,15 @@ const mini = {
         filter: ([...arr]) => (m) => {
             return arr.filter(m);
         },
-        separateByString: ([...arr]) => (str, caseSensitive = false) => {
-            let buildArr = [[],[]];
-            let tempArr = [...arr]
-
-            if(caseSensitive != true) {
-                str = str.toUpperCase()
-                arr = arr.map(item => item.toUpperCase())
-            }
-            //if the item includes the string, grab the matching item from the temporary array (bc otherwise itll return case insensitive data as all uppercase! which is bad!) and put it in the build array
-            arr.map((item, iterator) => item.includes(str) ? buildArr[0].push(tempArr[iterator]) : buildArr[1].push(tempArr[iterator]));
+        separateByString: ([...arr]) => (str) => {
+            let buildArr = [
+                arr.filter((item) => item.includes(str)),
+                arr.filter((item) => !item.includes(str))
+            ];
 
             return buildArr;
         },
-        combine: (arr1) => (arr2) => {
+        union: (arr1) => (arr2) => {
             return Array.from(new Set([...arr1, ...arr2]))
         },
     },
@@ -39,10 +34,9 @@ const mini = {
         compareType: (item1) => (item2) => {
             return typeof item1 === typeof item2
         },
-        compareObjects: (obj1) => (obj2) => {
-            for(const prop in obj1) {
-                return obj1[prop] === obj2[prop]
-            }
+        tap: (f) => (x) => {
+            f(x);
+            return x;
         },
     },
 }
